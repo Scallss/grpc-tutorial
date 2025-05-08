@@ -3,7 +3,7 @@ syntax = "proto3";
 package services;
 
 service PaymentService {
-    rpc ProcessPayment(PaymentRequest) return (PaymentResponse);
+    rpc ProcessPayment(PaymentRequest) returns (PaymentResponse);
 }
 
 service TransactionService {
@@ -11,7 +11,7 @@ service TransactionService {
 }
 
 service ChatService {
-    rpc Chat(stream ChatMessage) returns (stream Chat Message);
+    rpc Chat(stream ChatMessage) returns (stream ChatMessage);
 }
 
 message PaymentRequest {
